@@ -12,7 +12,7 @@ const StyledTextArea = styled.textarea`
   width: 100%;
   height: 100%;
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.2;
   font-family: inherit;
   resize: none;
   outline: none;

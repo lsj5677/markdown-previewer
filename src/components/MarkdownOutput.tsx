@@ -7,6 +7,7 @@ interface MarkdownOutputProps {
 
 const OutputContainer = styled.div`
   width: 100%;
+  line-height: 1.2;
   background-color: #e5e5e5;
 `;
 

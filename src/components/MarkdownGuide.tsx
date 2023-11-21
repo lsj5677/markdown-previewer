@@ -33,6 +33,8 @@ const CodeContent = styled.ul`
   margin: 0;
 `;
 const Code = styled.li`
+  margin-left: 0;
+  list-style: none;
   position: relative;
   padding-left: 1em;
 
