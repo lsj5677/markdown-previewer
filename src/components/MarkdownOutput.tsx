@@ -5,16 +5,15 @@ interface MarkdownOutputProps {
   markdown: string;
 }
 
-export const MarkdownOutput = ({ markdown }: MarkdownOutputProps) => {
-  const test = `# Your markdown here`;
+const OutputContainer = styled.div`
+  width: 100%;
+  background-color: #e5e5e5;
+`;
 
-  const OutputContainer = styled.section`
-    width: 100%;
-    background-color: #e5e5e5;
-  `;
+export const MarkdownOutput = ({ markdown }: MarkdownOutputProps) => {
   return (
     <OutputContainer>
-      <Markdown>{test}</Markdown>
+      <Markdown>{markdown}</Markdown>
     </OutputContainer>
   );
 };
