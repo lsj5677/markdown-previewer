@@ -10,6 +10,7 @@ function App() {
   const [markdown, setMarkdown] = useState<string>(`# Hello World`);
   const [showGuide, setShowGuide] = useState<boolean>(false);
 
+  const onToggleGuide = () => setShowGuide(!showGuide);
   const handleChange = () => {};
 
   const Container = styled.section`
@@ -25,11 +26,11 @@ function App() {
 
   return (
     <>
-      <Header showGuide={showGuide} setShowGuide={setShowGuide} />
+      <Header onToggleGuide={onToggleGuide} />
       {showGuide && <MarkdownGuide />}
       <Container>
         <MarkdownInput value={markdown} onChange={handleChange} />
-        <MarkdownOutput />
+        <MarkdownOutput markdown={markdown} />
       </Container>
     </>
   );

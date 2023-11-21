@@ -1,9 +1,20 @@
 import styled from "styled-components";
+import Markdown from "react-markdown";
 
-export const MarkdownOutput = () => {
-  const InputContainer = styled.section`
+interface MarkdownOutputProps {
+  markdown: string;
+}
+
+export const MarkdownOutput = ({ markdown }: MarkdownOutputProps) => {
+  const test = `# Your markdown here`;
+
+  const OutputContainer = styled.section`
     width: 100%;
     background-color: #e5e5e5;
   `;
-  return <InputContainer></InputContainer>;
+  return (
+    <OutputContainer>
+      <Markdown>{test}</Markdown>
+    </OutputContainer>
+  );
 };

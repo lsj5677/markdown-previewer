@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-export const MarkdownInput = ({ value, onChange }: any) => {
+interface MarkdownInputProps {
+  value: string;
+  onChange: () => void;
+}
+
+export const MarkdownInput = ({ value, onChange }: MarkdownInputProps) => {
   const InputContainer = styled.section`
     width: 100%;
   `;

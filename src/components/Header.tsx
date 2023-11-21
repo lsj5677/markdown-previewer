@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const Header = ({ showGuide, setShowGuide }: any) => {
-  const onToggleGuide = () => {
-    setShowGuide(!showGuide);
-  };
+interface HeaderProps {
+  onToggleGuide: () => void;
+}
+
+export const Header = ({ onToggleGuide }: HeaderProps) => {
   const Header = styled.header`
     display: flex;
     justify-content: space-between;
@@ -22,8 +23,7 @@ export const Header = ({ showGuide, setShowGuide }: any) => {
   `;
 
   const Button = styled.button`
-    background-color: ${showGuide ? "#cc7300" : "#fca311"};
-    color: ${showGuide ? "#fff" : "#000"};
+    background-color: #fca311;
 
     &:hover {
       background-color: #cc7e00;
@@ -35,9 +35,7 @@ export const Header = ({ showGuide, setShowGuide }: any) => {
   return (
     <Header>
       <Title>Markdown Previewer</Title>
-      <Button onClick={onToggleGuide}>
-        {showGuide ? "Close MD Cheat Sheet" : "Show MD Cheat Sheet"}
-      </Button>
+      <Button onClick={onToggleGuide}>Markdown Cheat Sheet</Button>
     </Header>
   );
 };
